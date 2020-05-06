@@ -12,7 +12,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
 app.use(bodyParser.json())
-app.use(require('./rutas/usuario'));
+    //configuracion local de rutas
+app.use(require('./rutas/index'));
+
 
 
 
@@ -25,5 +27,5 @@ mongoose.connect(process.env.URLDB, { useNewUrlParser: true, useCreateIndex: tru
 
 
 app.listen(process.env.PORT, () => {
-    console.log("escuchando el puerto 3000")
+    console.log("escuchando el puerto:", process.env.PORT)
 })

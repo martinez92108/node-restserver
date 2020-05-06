@@ -44,7 +44,7 @@ let usuarioSchema = new Schema({
     }
 
 });
-//evita que se muetre un propiedad en la respuesta
+//evita que se muestre un propiedad en la respuesta
 usuarioSchema.methods.toJSON = function() {
     let user = this;
     let userObject = user.toObject();
